@@ -1,2 +1,20 @@
 body {
-  background-color: #1f1f1f; }
+  background-color: #1f1f1f;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5; }
+
+* {
+  box-sizing: border-box; }
+
+.navbar {
+  display: flex;
+  background: black;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px; }
+  .navbar-menu {
+    display: flex; }
