@@ -1,0 +1,22 @@
+{
+  "name": "tivcsu.github.io",
+  "version": "1.0.0",
+  "description": "Tivadar Lisch Portfolio Page",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tivcsu/tivcsu.github.io.git"
+  },
+  "author": "Tivadar Lisch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tivcsu/tivcsu.github.io/issues"
+  },
+  "homepage": "https://github.com/tivcsu/tivcsu.github.io#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
