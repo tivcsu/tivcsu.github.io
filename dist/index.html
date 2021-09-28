@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tivadar Lisch</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <nav class="navbar">
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="module" src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="portfolio">
+      <nav class="navbar">
         <div class="navbar__logo">Tivadar Lisch</div>
         <ul class="navbar-menu">
-            <li class="navbar-menu__item"><a href="#">Home</a></li>
-            <li class="navbar-menu__item"><a href="#">Projects</a></li>
-            <li class="navbar-menu__item"><a href="#">Contact</a></li>
+          <li class="navbar-menu__item" id="nav-home">
+            <a href="#home">Home</a>
+          </li>
+          <li class="navbar-menu__item" id="nav-about">
+            <a href="#about">About</a>
+          </li>
+          <li class="navbar-menu__item"><a href="#">Contact</a></li>
         </ul>
-    </nav>
-    <div class="header">
-        <div class="header__main-title">
+      </nav>
+      <div class="pages">
+        <div class="page home" id="home">
+          <div class="home__name">
+            TIVADAR <br />
+            LISCH
+          </div>
+          <div class="page__spacers">
+            <div class="spacer spacer--top"></div>
+            <div class="spacer spacer--bottom"></div>
+          </div>
+          <div class="home__title">
             developer & designer
-            <div class="header__decor-line"></div>
+            <div class="home__decor-line"></div>
+          </div>
+          <div class="home__learn-more">learn more</div>
         </div>
-        
-        <div class="header__sub-title">I’m Tivadar Lisch, front end developer and designer based in Hungary.</div>
-        <div class="header__learn-more">learn more</div>
+        <div class="page about" id="about">
+          <div class="about__title">About me</div>
+          <div class="page__spacers">
+            <div class="spacer spacer--top"></div>
+            <div class="spacer spacer--bottom"></div>
+          </div>
+          <div class="about__sub-title">
+            I’m Tivadar Lisch, front end developer and designer based in
+            Hungary.
+          </div>
+          <button class="btn">Details</button>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="pagination">
+          <div class="pagination__page active" id="page-home"></div>
+          <div class="pagination__page" id="page-about"></div>
+          <div class="pagination__page" id="page-contact"></div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
