@@ -40,7 +40,8 @@ a {
   position: relative;
   height: 100vh;
   width: 100vw;
-  overflow: scroll;
+  overflow-y: scroll;
+  //overflow-x: scroll;
   //scroll-snap-type: y mandatory;
 }
 
@@ -82,6 +83,7 @@ a {
   height: 100vh;
   padding-left: 5%;
   padding-top: 80px;
+  position: relative;
   // scroll-snap-align: start;
 
   &__spacers {
@@ -134,11 +136,14 @@ a {
   }
 }
 
-.about {
+.about,
+.contact {
   &__title {
     font-weight: 500;
     font-size: 8rem;
     letter-spacing: 10px;
+    position: relative;
+    z-index: 5;
   }
   &__sub-title {
     font-weight: 500;
@@ -146,6 +151,38 @@ a {
     letter-spacing: 5px;
     max-width: 400px;
     margin-bottom: 45px;
+    position: relative;
+    z-index: 5;
+  }
+
+  &__image {
+    max-width: 60%;
+    position: absolute;
+    right: 20px;
+    top: 18%;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(#0a9396, 0.2);
+      border: 5px solid $secondary_color;
+    }
+  }
+}
+
+.contact {
+  &__email,
+  &__linkedin {
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    max-width: 400px;
+    margin-bottom: 45px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

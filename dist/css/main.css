@@ -30,7 +30,7 @@ a {
   position: relative;
   height: 100vh;
   width: 100vw;
-  overflow: scroll; }
+  overflow-y: scroll; }
 
 .navbar {
   display: flex;
@@ -62,7 +62,8 @@ a {
   width: 100vw;
   height: 100vh;
   padding-left: 5%;
-  padding-top: 80px; }
+  padding-top: 80px;
+  position: relative; }
   .page__spacers {
     position: relative;
     margin: 50px 0;
@@ -102,17 +103,46 @@ a {
   right: -200px;
   top: 60%; }
 
-.about__title {
+.about__title,
+.contact__title {
   font-weight: 500;
   font-size: 8rem;
-  letter-spacing: 10px; }
+  letter-spacing: 10px;
+  position: relative;
+  z-index: 5; }
 
-.about__sub-title {
+.about__sub-title,
+.contact__sub-title {
   font-weight: 500;
   font-size: 2rem;
   letter-spacing: 5px;
   max-width: 400px;
-  margin-bottom: 45px; }
+  margin-bottom: 45px;
+  position: relative;
+  z-index: 5; }
+
+.about__image,
+.contact__image {
+  max-width: 60%;
+  position: absolute;
+  right: 20px;
+  top: 18%;
+  z-index: 1; }
+  .about__image img,
+  .contact__image img {
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(10, 147, 150, 0.2);
+    border: 5px solid #bb3e03; }
+
+.contact__email, .contact__linkedin {
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  max-width: 400px;
+  margin-bottom: 45px;
+  cursor: pointer; }
+  .contact__email:hover, .contact__linkedin:hover {
+    text-decoration: underline; }
 
 .btn {
   display: flex;
