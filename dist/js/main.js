@@ -5,7 +5,10 @@ $(document).ready(function () {
         setTimeout(function () {
             $(".page").hide();
         }, 400);
-
     })
 
+    $("#back-to-home").on("click", function () {
+        $(".about-wrapper").removeClass('active');
+        $(".page").show();
+    })
 });

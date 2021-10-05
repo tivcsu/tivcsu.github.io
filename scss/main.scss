@@ -96,7 +96,7 @@ a {
 
 .spacer {
   width: 100px;
-  height: 5px;
+  height: 4px;
   border-radius: 4px;
   background: $secondary_color;
   position: absolute;
@@ -209,14 +209,16 @@ a {
   &-wrapper {
     background: white;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     left: 150vw;
     transition: left ease-in-out 0.4s;
     z-index: 100;
 
     &.active {
-      position: absolute;
+      position: fixed;
       left: 0;
+      overflow-y: scroll;
+      height: 100%;
     }
 
     .title {
@@ -341,6 +343,13 @@ a {
         margin-left: auto;
       }
     }
+
+    .btn {
+      position: absolute;
+      top: 80px;
+      left: 80px;
+      z-index: 5;
+    }
   }
 }
 
@@ -380,6 +389,15 @@ a {
 
   &:hover {
     background: lighten($secondary_color, 8);
+  }
+
+  &--outline {
+    background: transparent;
+    color: $secondary_color;
+    border: 1px solid $secondary_color;
+    &:hover {
+      color: white;
+    }
   }
 }
 
@@ -454,4 +472,43 @@ a {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.arrow {
+  background: #fff;
+  height: 3px;
+  width: 30px;
+  margin: 0 15px;
+  position: relative;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: "";
+    background: #fff;
+    position: absolute;
+    height: 3px;
+    width: 15px;
+  }
+
+  &:before {
+    right: -3px;
+    bottom: -4px;
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    right: -3px;
+    top: -4px;
+    transform: rotate(45deg);
+  }
+}
+
+.learn-more {
+  display: flex;
+  position: absolute;
+  left: 0;
+  align-items: center;
+  cursor: pointer;
+  transform: rotate(90deg);
 }
