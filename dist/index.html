@@ -9,10 +9,14 @@
     <script type="module" src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body class="home">
     <div class="portfolio">
       <nav class="navbar">
-        <div class="navbar__logo">Tivadar Lisch</div>
+        <div class="navbar__logo-wrapper">
+          <div class="navbar__logo"><img src="./images/Logo.png" alt="" /></div>
+          <div class="navbar__name">Tivadar Lisch</div>
+        </div>
+
         <ul class="navbar-menu">
           <li class="navbar-menu__item" id="nav-home">
             <a href="#home">Home</a>
@@ -27,17 +31,20 @@
       </nav>
       <div class="pages">
         <div class="page home" id="home">
-          <div class="home__name">
-            TIVADAR <br />
-            LISCH
+          <div class="title">
+            <h1 class="home__name">
+              TIVADAR <br />
+              LISCH
+            </h1>
+            <div class="page__spacers">
+              <div class="spacer spacer--top"></div>
+              <div class="spacer spacer--bottom"></div>
+            </div>
+            <div class="home__title">developer & designer</div>
           </div>
-          <div class="page__spacers">
-            <div class="spacer spacer--top"></div>
-            <div class="spacer spacer--bottom"></div>
-          </div>
-          <div class="home__title">
-            developer & designer
-            <div class="home__decor-line"></div>
+          <div class="logo-wrapper">
+            <h2 class="text">Portfolio</h2>
+            <div class="logo"><img src="./images/Logo.png" alt="" /></div>
           </div>
           <a href="#about" class="learn-more">
             learn more
@@ -62,18 +69,20 @@
         <div class="about-wrapper">
           <div class="about-header">
             <button class="btn btn--outline" id="back-to-home">Go back</button>
+            <div class="about-header__text">
+              <div class="title">
+                <div class="title__main">About Me</div>
+                <div class="page__spacers">
+                  <div class="spacer spacer--top"></div>
+                  <div class="spacer spacer--bottom"></div>
+                </div>
+                <div class="title__sub-title">
+                  I like making nice designs and develop them.
+                </div>
+              </div>
+            </div>
             <div class="about-header__image">
               <img src="./images/About.png" alt="" />
-            </div>
-            <div class="title">
-              <div class="title__main">About Me</div>
-              <div class="page__spacers">
-                <div class="spacer spacer--top"></div>
-                <div class="spacer spacer--bottom"></div>
-              </div>
-              <div class="title__sub-title">
-                I like making nice designs and develop them.
-              </div>
             </div>
           </div>
           <div class="about-content">
@@ -201,171 +210,178 @@
           <div class="pagination__page" id="page-contact"></div>
         </div>
       </div>
+      <!-- <div class="background-decor">
+        <div class="background-decor__column">
+          <div class="background-decor__line"></div>
+          <div
+            class="
+              background-decor__line
+              background-decor--inside
+              background-decor--one
+            "
+          >
+            <div
+              class="
+                background-decor__line
+                background-decor--inside
+                background-decor--two
+              "
+            >
+              <div
+                class="
+                  background-decor__line
+                  background-decor--inside
+                  background-decor--three
+                "
+              >
+                <div
+                  class="
+                    background-decor__line
+                    background-decor--inside
+                    background-decor--four
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="background-decor__line"></div>
+        </div>
+        <div class="background-decor__column">
+          <div
+            class="
+              background-decor__line
+              background-decor--inside
+              background-decor--one
+            "
+          >
+            <div
+              class="
+                background-decor__line
+                background-decor--inside
+                background-decor--two
+              "
+            >
+              <div
+                class="
+                  background-decor__line
+                  background-decor--inside
+                  background-decor--three
+                "
+              >
+                <div
+                  class="
+                    background-decor__line
+                    background-decor--inside
+                    background-decor--four
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="background-decor__line"></div>
+          <div class="background-decor__line"></div>
+          <div
+            class="
+              background-decor__line
+              background-decor--inside
+              background-decor--one
+            "
+          >
+            <div
+              class="
+                background-decor__line
+                background-decor--inside
+                background-decor--two
+              "
+            >
+              <div
+                class="
+                  background-decor__line
+                  background-decor--inside
+                  background-decor--three
+                "
+              >
+                <div
+                  class="
+                    background-decor__line
+                    background-decor--inside
+                    background-decor--four
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="background-decor__column">
+          <div
+            class="
+              background-decor__line
+              background-decor--inside
+              background-decor--one
+            "
+          >
+            <div
+              class="
+                background-decor__line
+                background-decor--inside
+                background-decor--two
+              "
+            >
+              <div
+                class="
+                  background-decor__line
+                  background-decor--inside
+                  background-decor--three
+                "
+              >
+                <div
+                  class="
+                    background-decor__line
+                    background-decor--inside
+                    background-decor--four
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="background-decor__line"></div>
+          <div
+            class="
+              background-decor__line
+              background-decor--inside
+              background-decor--one
+            "
+          >
+            <div
+              class="
+                background-decor__line
+                background-decor--inside
+                background-decor--two
+              "
+            >
+              <div
+                class="
+                  background-decor__line
+                  background-decor--inside
+                  background-decor--three
+                "
+              >
+                <div
+                  class="
+                    background-decor__line
+                    background-decor--inside
+                    background-decor--four
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
       <div class="background-decor">
-        <div class="background-decor__column">
-          <div class="background-decor__line"></div>
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div class="background-decor__line"></div>
-        </div>
-        <div class="background-decor__column">
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div class="background-decor__line"></div>
-          <div class="background-decor__line"></div>
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="background-decor__column">
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div class="background-decor__line"></div>
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
+        <div class="outline-wrapper">
+          <div class="outline">
+            <div class="outline__img"></div>
           </div>
         </div>
       </div>

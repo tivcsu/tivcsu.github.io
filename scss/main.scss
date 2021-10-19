@@ -43,6 +43,10 @@ a {
   overflow-y: scroll;
   //overflow-x: scroll;
   //scroll-snap-type: y mandatory;
+
+  &.scrollOn {
+    overflow-y: hidden;
+  }
 }
 
 .navbar {
@@ -68,6 +72,20 @@ a {
       margin: 0 20px;
     }
   }
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    margin-right: 15px;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .pages {
@@ -81,7 +99,7 @@ a {
 .page {
   width: 100vw;
   height: 100vh;
-  padding-left: 5%;
+  padding-left: 11%;
   padding-top: 80px;
   position: relative;
   // scroll-snap-align: start;
@@ -112,9 +130,52 @@ a {
 }
 
 .home {
+  display: flex;
+  .title {
+    display: inline-block;
+    margin: auto 0;
+    flex: 1;
+  }
+  .logo-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 29.427%;
+    margin: auto;
+    height: 1385px;
+    width: 1385px;
+    justify-content: center;
+
+    .text {
+      position: absolute;
+      z-index: 2;
+      color: $secondary_color;
+      text-transform: uppercase;
+      font-size: 8rem;
+      letter-spacing: 8px;
+      top: 43%;
+      left: 21%;
+      text-shadow: 0 10px 15px rgba(black, 0.25);
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 90%;
+      }
+    }
+  }
   &__name {
-    font-size: 6rem;
+    font-size: 8rem;
     letter-spacing: 15px;
+    line-height: 1;
+    margin: 0;
+
+    @media (min-width: 700px) {
+      font-size: 12rem;
+    }
   }
 
   &__title {
@@ -124,6 +185,7 @@ a {
     display: inline-block;
     margin-bottom: 15px;
     letter-spacing: 5px;
+    max-width: 220px;
   }
 
   &__decor-line {
@@ -156,12 +218,16 @@ a {
   }
 
   &__image {
-    max-width: 1000px;
-    width: 60%;
+    max-width: 1300px;
     position: absolute;
-    right: 20px;
-    top: 18%;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 29.427%;
+    margin: auto;
+    justify-content: center;
+    padding-right: 30px;
 
     img {
       width: 100%;
@@ -176,18 +242,25 @@ a {
     height: 100vh;
     width: 100%;
     position: relative;
+    display: flex;
 
     &__image {
       width: 100%;
       height: 100%;
       position: relative;
       z-index: 1;
+      flex: 2;
 
       img {
         object-fit: cover;
-        max-height: 100%;
+        height: 100%;
         width: 100%;
       }
+    }
+
+    &__text {
+      flex: 1;
+      background: $primary_color;
     }
   }
 
@@ -345,7 +418,8 @@ a {
     }
 
     .btn {
-      position: absolute;
+      display: none;
+      position: fixed;
       top: 80px;
       left: 80px;
       z-index: 5;
@@ -423,7 +497,7 @@ a {
 }
 
 .background-decor {
-  position: fixed;
+  /*position: fixed;
   top: 0;
   right: 10%;
   display: flex;
@@ -467,6 +541,44 @@ a {
     height: 110px;
     width: 25px;
     margin: 0;
+  }*/
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  .outline-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 29.427%;
+    margin: auto;
+    height: 1385px;
+    width: 1385px;
+    z-index: -100;
+
+    @media (max-width: 800px) {
+      width: 100vw;
+      height: 100vw;
+      left: 23%;
+    }
+  }
+  .outline {
+    transform: translate3d(0px, 0px, 0px) rotate(0.0001deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: relative;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+
+    &__img {
+      background: url("../images/background-decor.png");
+      background-size: 100%;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -511,4 +623,5 @@ a {
   align-items: center;
   cursor: pointer;
   transform: rotate(90deg);
+  bottom: calc(50% - 27vh);
 }
