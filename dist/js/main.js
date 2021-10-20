@@ -27,22 +27,49 @@ $(document).ready(function () {
         isScrolling = false;
         scrollToPos = 0;
         $($container).removeClass("scrollOn")
+        $(".logo-wrapper").removeClass("inActive")
+    })
+
+    $("#openMenu").on("click", function () {
+        if ($(this).hasClass("navbar__menu-button--open")) {
+            $(this).removeClass("navbar__menu-button--open")
+            $("#navbar-menu").removeClass("navbar-menu--open")
+        }
+        else {
+            $(this).addClass("navbar__menu-button--open")
+            $("#navbar-menu").addClass("navbar-menu--open")
+        }
+    })
+
+    $(".navbar-menu__item").on("click", function () {
+        $("#openMenu").removeClass("navbar__menu-button--open")
+        $("#navbar-menu").removeClass("navbar-menu--open")
     })
 
 
     $($container).scroll(function (event) {
+        if ($activePage == "home") {
+            $(".logo-wrapper").addClass("inActive")
+        }
         if (!isScrolling) {
             isScrolling = true;
             scrollToPage();
             $(this).addClass("scrollOn")
+            $(".pagination__page").removeClass("active")
+            $("#page-" + $activePage).addClass("active")
         }
         else if ($container.scrollTop() == scrollToPos) {
             isScrolling = false
             $(this).removeClass("scrollOn")
             lastScrollTop = $($container).scrollTop()
+            if ($activePage == "home") {
+                $(".logo-wrapper").removeClass("inActive")
+            }
+
         }
 
         return
+
     })
 
 

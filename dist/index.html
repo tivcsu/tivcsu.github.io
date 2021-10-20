@@ -17,7 +17,7 @@
           <div class="navbar__name">Tivadar Lisch</div>
         </div>
 
-        <ul class="navbar-menu">
+        <ul id="navbar-menu" class="navbar-menu">
           <li class="navbar-menu__item" id="nav-home">
             <a href="#home">Home</a>
           </li>
@@ -28,6 +28,7 @@
             <a href="#contact">Contact</a>
           </li>
         </ul>
+        <div id="openMenu" class="navbar__menu-button"></div>
       </nav>
       <div class="pages">
         <div class="page home" id="home">
@@ -52,16 +53,18 @@
           </a>
         </div>
         <div class="page about" id="about">
-          <div class="about__title">About me</div>
-          <div class="page__spacers">
-            <div class="spacer spacer--top"></div>
-            <div class="spacer spacer--bottom"></div>
+          <div class="title">
+            <div class="about__title">About me</div>
+            <div class="page__spacers">
+              <div class="spacer spacer--top"></div>
+              <div class="spacer spacer--bottom"></div>
+            </div>
+            <div class="about__sub-title">
+              I’m Tivadar Lisch, front end developer and designer based in
+              Hungary.
+            </div>
+            <button class="btn" id="about-btn">Details</button>
           </div>
-          <div class="about__sub-title">
-            I’m Tivadar Lisch, front end developer and designer based in
-            Hungary.
-          </div>
-          <button class="btn" id="about-btn">Details</button>
           <div class="about__image">
             <img src="./images/About.png" alt="" />
           </div>
@@ -190,14 +193,16 @@
           </div>
         </div>
         <div class="page contact" id="contact">
-          <div class="contact__title">Contact</div>
-          <div class="page__spacers">
-            <div class="spacer spacer--top"></div>
-            <div class="spacer spacer--bottom"></div>
+          <div class="title">
+            <div class="contact__title">Contact</div>
+            <div class="page__spacers">
+              <div class="spacer spacer--top"></div>
+              <div class="spacer spacer--bottom"></div>
+            </div>
+            <div class="contact__email">vadarti@gmail.com</div>
+            <div class="contact__linkedin">LinkedIn</div>
+            <button class="btn">Get in touch</button>
           </div>
-          <div class="contact__email">vadarti@gmail.com</div>
-          <div class="contact__linkedin">LinkedIn</div>
-          <button class="btn">Get in touch</button>
           <div class="about__image">
             <img src="./images/About.png" alt="" />
           </div>
@@ -205,179 +210,12 @@
       </div>
       <div class="footer">
         <div class="pagination">
-          <div class="pagination__page active" id="page-home"></div>
+          <div class="pagination__page" id="page-home"></div>
           <div class="pagination__page" id="page-about"></div>
           <div class="pagination__page" id="page-contact"></div>
         </div>
       </div>
-      <!-- <div class="background-decor">
-        <div class="background-decor__column">
-          <div class="background-decor__line"></div>
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div class="background-decor__line"></div>
-        </div>
-        <div class="background-decor__column">
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div class="background-decor__line"></div>
-          <div class="background-decor__line"></div>
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="background-decor__column">
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div class="background-decor__line"></div>
-          <div
-            class="
-              background-decor__line
-              background-decor--inside
-              background-decor--one
-            "
-          >
-            <div
-              class="
-                background-decor__line
-                background-decor--inside
-                background-decor--two
-              "
-            >
-              <div
-                class="
-                  background-decor__line
-                  background-decor--inside
-                  background-decor--three
-                "
-              >
-                <div
-                  class="
-                    background-decor__line
-                    background-decor--inside
-                    background-decor--four
-                  "
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>-->
+
       <div class="background-decor">
         <div class="outline-wrapper">
           <div class="outline">
